@@ -53,7 +53,11 @@ public class FileIO {
 		try {
 			FileInputStream fIn = new FileInputStream(rFile);
 			in = new ObjectInputStream(fIn);
+			
 			toReturn = in.readObject();
+			
+			fIn.close();
+			in.close();
 		} catch (FileNotFoundException e) {
 			// TODO Search File or Create It
 			e.printStackTrace();

@@ -21,9 +21,9 @@ public class Cart implements Serializable
 	{
 		// checks if List has any product with same id, if so just changes the count
 		// else it adds to the list
-		for (int i = 0; i < idCountList.size(); i++)
+		for (String pr : idCountList)
 		{
-			String []line = idCountList.get(i).split(" ");
+			String []line = pr.split(" ");
 			int productId = Integer.parseInt(line[0]);
 			int productCount = Integer.parseInt(line[1]);
 
@@ -38,7 +38,7 @@ public class Cart implements Serializable
 	}
 	public boolean removeProduct(int id, int deleteCount)
 	{
-		for (int i = 0; i < idCountList.size(); i++) {
+		for (int i=0; i < idCountList.size() ; i++) {
 
 			String []line = idCountList.get(i).split(" ");
 			int productId = Integer.parseInt(line[0]);
@@ -66,9 +66,9 @@ public class Cart implements Serializable
 	public double calculateTotalCost(ProductManager manager)
 	{
 		double totalCost=0;
-		for (int i = 0; i < idCountList.size(); i++)
+		for (String pr : idCountList)
 		{
-			String []line = idCountList.get(i).split(" ");
+			String []line = pr.split(" ");
 			int productId = Integer.parseInt(line[0]);
 			int productCount = Integer.parseInt(line[1]);
 
