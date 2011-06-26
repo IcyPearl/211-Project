@@ -11,14 +11,19 @@ import java.io.Serializable;
 
 public class Product implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private int id;
-	private String cost;
+	private double cost;
 	private String properties;
 	private boolean isActive;
 	private int leftInStock;
 	private int saleCount;
 	
-	public Product(int id, String cost, String properties, boolean isActive,
+	public Product(int id, double cost, String properties, boolean isActive,
 			int leftInStock, int saleCount) {
 		this.id = id;
 		this.cost = cost;
@@ -35,10 +40,10 @@ public class Product implements Serializable {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getCost() {
+	public double getCost() {
 		return cost;
 	}
-	public void setCost(String cost) {
+	public void setCost(double cost) {
 		this.cost = cost;
 	}
 	public String getProperties() {

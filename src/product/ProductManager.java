@@ -1,5 +1,6 @@
 package product;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
@@ -9,7 +10,12 @@ import java.util.ArrayList;
  *
  */
 
-public class ProductManager {
+public class ProductManager implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3L;
 	
 	private ArrayList<Category> categoryList = new ArrayList<Category>();
 
